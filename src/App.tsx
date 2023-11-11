@@ -23,7 +23,7 @@ import { useState } from "react";
 import ReactAudioPlayer from "react-audio-player";
 
 function App() {
-  // const [vesselShieldOpacity, setVesselShieldOpacity] = useState(0);
+  const [vesselShieldOpacity, setVesselShieldOpacity] = useState(0);
   const [soloshipOpacity, setSoloShipOpacity] = useState(0);
   const [grandMarketOpacity, setGrandMarketOpacity] = useState(0);
   const [armoryOpacity, setArmoryOpacity] = useState(0);
@@ -59,14 +59,14 @@ function App() {
         <img
           src={vesselShield}
           alt="vessel_shield"
-          className={`absolute top-[7%] left-[15%] w-[28%] opacity-0`}
+          className={`absolute top-[7%] left-[15%] w-[28%] opacity-${vesselShieldOpacity}`}
           // onClick={playSound}
           onMouseOver={() => {
-            // setVesselShieldOpacity(1);
+            setVesselShieldOpacity(1);
             playSound();
           }}
           onMouseLeave={() => {
-            // setVesselShieldOpacity(0);
+            setVesselShieldOpacity(0);
           }}
         />
         <img
