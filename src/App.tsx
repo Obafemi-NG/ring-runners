@@ -56,6 +56,7 @@ function App() {
           alt="wallet"
           className="fixed top-[0.5rem] left-[0.2rem] lg:top-[4rem] lg:left-[2rem] w-[10rem] lg:w-[20rem] sm:w-[15rem] z-10 "
         />
+
         <img
           src={vesselShield}
           alt="vessel_shield"
