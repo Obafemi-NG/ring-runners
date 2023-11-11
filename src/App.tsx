@@ -59,7 +59,7 @@ function App() {
         <img
           src={vesselShield}
           alt="vessel_shield"
-          className={`absolute top-[7%] left-[15%] w-[28%] opacity-${vesselShieldOpacity}`}
+          className={`absolute top-[7%] left-[15%] w-[28%] opacity-0`}
           // onClick={playSound}
           onMouseOver={() => {
             setVesselShieldOpacity(1);
