@@ -43,9 +43,6 @@ function App() {
   const playSound = () => {
     new Audio(hoverSound).play();
   };
-  setInterval(() => {
-    setPlayBgAudio(true);
-  }, 8400);
 
   useEffect(() => {
     if (playBgAudio === true) {
