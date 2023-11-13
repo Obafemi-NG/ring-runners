@@ -19,8 +19,9 @@ import logo from "./assets/Logo.png";
 import bgMusic from "./assets/audio/sci-fi-cyberpunk-trailer-110587.mp3";
 import hoverSound from "./assets/audio/mixkit-space-coin-win-notification-271.wav";
 
-import { useState } from "react";
-import ReactAudioPlayer from "react-audio-player";
+import { useEffect, useState } from "react";
+// import ReactAudioPlayer from "react-audio-player";
+// import ReactPlayer from "react-player";
 
 function App() {
   const [vesselShieldOpacity, setVesselShieldOpacity] = useState(0);
@@ -37,15 +38,31 @@ function App() {
   const [outpostOpacity, setOutpostOpacity] = useState(0);
 
   const [displayOverlay, setDisplayOverlay] = useState(true);
+  const [playBgAudio, setPlayBgAudio] = useState(false);
 
   const playSound = () => {
     new Audio(hoverSound).play();
   };
+  setInterval(() => {
+    setPlayBgAudio(true);
+  }, 8400);
+
+  useEffect(() => {
+    if (playBgAudio === true) {
+      const music = new Audio(bgMusic);
+      music.play();
+      music.loop = true;
+    }
+    console.log(playBgAudio);
+  }, [playBgAudio]);
 
   return (
     <>
-      <ReactAudioPlayer src={bgMusic} autoPlay preload="metadata" loop />
-      <div className=" relative overflow-hidden">
+      {/* <ReactPlayer url={bgMusic} playing={true} volume={0.5} loop /> */}
+      <div
+        onClick={() => setPlayBgAudio(true)}
+        className=" relative overflow-hidden"
+      >
         <img
           src={backgroundImage}
           alt="backgroundImage"
