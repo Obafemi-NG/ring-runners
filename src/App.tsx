@@ -1,3 +1,4 @@
+// images and components
 import backgroundImage from "./assets/RingRunnerWeb_AllZone_NoEffect 1.png";
 import wallet from "./assets/wallet.png";
 import vesselShield from "./assets/VessleShield 2.png";
@@ -20,8 +21,6 @@ import bgMusic from "./assets/audio/sci-fi-cyberpunk-trailer-110587.mp3";
 import hoverSound from "./assets/audio/mixkit-space-coin-win-notification-271.wav";
 
 import { useEffect, useState } from "react";
-// import ReactAudioPlayer from "react-audio-player";
-// import ReactPlayer from "react-player";
 
 function App() {
   const [vesselShieldOpacity, setVesselShieldOpacity] = useState(0);
@@ -55,7 +54,6 @@ function App() {
 
   return (
     <>
-      {/* <ReactPlayer url={bgMusic} playing={true} volume={0.5} loop /> */}
       <div
         onClick={() => setPlayBgAudio(true)}
         className=" relative overflow-hidden"
@@ -98,7 +96,7 @@ function App() {
         <img
           src={grandMarketHolo}
           alt="grand_market_holo"
-          className={`absolute top-[2%] right-0 w-[33%] opacity-${grandMarketOpacity} `}
+          className={`absolute top-[2%] right-[-1%] w-[32.5%] opacity-${grandMarketOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setGrandMarketOpacity(1)}
           onMouseLeave={() => setGrandMarketOpacity(0)}
@@ -106,7 +104,7 @@ function App() {
         <img
           src={armoryHolo}
           alt="armory_holo"
-          className={`absolute top-[15%] left-[38.5%] w-[27%] opacity-${armoryOpacity} `}
+          className={`absolute top-[15%] left-[39%] w-[27%] opacity-${armoryOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setArmoryOpacity(1)}
           onMouseLeave={() => setArmoryOpacity(0)}
@@ -114,7 +112,7 @@ function App() {
         <img
           src={researchCenter}
           alt="research_center"
-          className={`absolute top-[19.5%] left-0 w-[27.5%] opacity-${researchCenterOpacity} `}
+          className={`absolute top-[19.5%] left-0 w-[27%] opacity-${researchCenterOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setResearchCenterOpacity(1)}
           onMouseLeave={() => setResearchCenterOpacity(0)}
@@ -130,7 +128,7 @@ function App() {
         <img
           src={virtualTraining}
           alt="virtual_training"
-          className={`absolute top-[20.5%] right-0 w-[41%] opacity-${virtualTrainingOpacity} `}
+          className={`absolute top-[20%] right-[-0.7%] w-[41.5%] opacity-${virtualTrainingOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setVirtualTrainingOpacity(1)}
           onMouseLeave={() => setVirtualTrainingOpacity(0)}
@@ -138,7 +136,7 @@ function App() {
         <img
           src={bossFight}
           alt="boss_fight"
-          className={`absolute top-[29.5%] right-[28%] w-[45%] opacity-${bossFightOpacity} `}
+          className={`absolute top-[29.8%] right-[28%] w-[44%] opacity-${bossFightOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setBossFightOpacity(1)}
           onMouseLeave={() => setBossFightOpacity(0)}
@@ -146,7 +144,7 @@ function App() {
         <img
           src={rechargeCenter}
           alt="recharge_center"
-          className={`absolute top-[45.5%] left-0 w-[39%] opacity-${rechargeCenterOpacity} `}
+          className={`absolute top-[45.3%] left-[0.2%] w-[38.9%] opacity-${rechargeCenterOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setRechargeCenterOpacity(1)}
           onMouseLeave={() => setRechargeCenterOpacity(0)}
@@ -154,7 +152,7 @@ function App() {
         <img
           src={dungeon}
           alt="dungeon"
-          className={`absolute top-[38%] right-0 w-[35%] opacity-${dungeonOpacity} `}
+          className={`absolute top-[38%] right-[-1%] w-[34.3%] opacity-${dungeonOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setDungeonOpacity(1)}
           onMouseLeave={() => setDungeonOpacity(0)}
@@ -162,7 +160,7 @@ function App() {
         <img
           src={beacon}
           alt="beaon_holo"
-          className={`absolute bottom-[15%] left-[8.5%] w-[28%] opacity-${beaconOpacity} `}
+          className={`absolute bottom-[14.9%] left-[8.5%] w-[27.7%] opacity-${beaconOpacity} `}
           onMouseEnter={playSound}
           onMouseOver={() => setBeaconOpacity(1)}
           onMouseLeave={() => setBeaconOpacity(0)}
